@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className="list-group">
       <Link to="/" className="list-group-item list-group-item-action">
-        ALl Quotes
+        All Quotes
       </Link>
       {categories.map(category => (
         <Link
