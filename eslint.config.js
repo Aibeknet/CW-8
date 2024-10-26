@@ -28,13 +28,5 @@ export default tseslint.config(
       semi: ["error", "always"],
       quotes: ["error", "single"],
     },
-
-    // rules: {
-    //   ...reactHooks.configs.recommended.rules,
-    //   "react-refresh/only-export-components": [
-    //     "warn",
-    //     { allowConstantExport: true },
-    //   ],
-    // },
   },
 );
