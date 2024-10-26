@@ -17,6 +17,21 @@ const AddQuote: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className='mb-4'>
+      <h3 className="mb-4">Submit new quote</h3>
+      <div className='mb-3'>
+        <label className='form-label'>Category</label>
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className='form-select'
+        >
+          <option value='star-wars'>Star Wars</option>
+          <option value='famous-people'>Famous people</option>
+          <option value='saying'>Saying</option>
+          <option value='humour'>Humor</option>
+          <option value='motivational'>Motivational</option>
+        </select>
+      </div>
       <div className='mb-3'>
         <label className='form-label'>Author</label>
         <input
@@ -34,20 +49,6 @@ const AddQuote: React.FC = () => {
           className='form-control'
           required
         />
-      </div>
-      <div className='mb-3'>
-        <label className='form-label'>Category</label>
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          className='form-select'
-        >
-          <option value='star-wars'>Star Wars</option>
-          <option value='famous-people'>Famous people</option>
-          <option value='saying'>Saying</option>
-          <option value='humour'>Humor</option>
-          <option value='motivational'>Motivational</option>
-        </select>
       </div>
       <button type='submit' className='btn btn-primary'>Add the quote</button>
     </form>

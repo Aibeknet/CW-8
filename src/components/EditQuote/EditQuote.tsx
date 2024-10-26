@@ -24,29 +24,12 @@ const EditQuote: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="mb-4">
-      <div className="mb-3">
-        <label className="form-label">Author</label>
-        <input
-          value={quote.author}
-          onChange={(e) => setQuote({ ...quote, author: e.target.value })}
-          className="form-control"
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Text of the quote</label>
-        <input
-          value={quote.text}
-          onChange={(e) => setQuote({ ...quote, text: e.target.value })}
-          className="form-control"
-          required
-        />
-      </div>
+      <h3 className="mb-3">Edit a quote</h3>
       <div className="mb-3">
         <label className="form-label">Category</label>
         <select
           value={quote.category}
-          onChange={(e) => setQuote({ ...quote, category: e.target.value })}
+          onChange={(e) => setQuote({...quote, category: e.target.value})}
           className="form-select"
         >
           <option value="star-wars">Star Wars</option>
@@ -55,6 +38,24 @@ const EditQuote: React.FC = () => {
           <option value="humour">Humour</option>
           <option value="motivational">Motivational</option>
         </select>
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Author</label>
+        <input
+          value={quote.author}
+          onChange={(e) => setQuote({...quote, author: e.target.value})}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Text of the quote</label>
+        <input
+          value={quote.text}
+          onChange={(e) => setQuote({...quote, text: e.target.value})}
+          className="form-control"
+          required
+        />
       </div>
       <button type="submit" className="btn btn-success">Save changes</button>
     </form>
